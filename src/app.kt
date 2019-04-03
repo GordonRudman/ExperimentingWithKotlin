@@ -1,4 +1,7 @@
+data class Address(val line1 : String, val line2 : String, val suburb : String, val city : String)
+
 open class Animal(val id: Int, var name : String, val home : Address) {}
+
 class Dog(id : Int, name : String, home : Address, val breed: String) : Animal(id, name, home)
 {
     override fun toString(): String
