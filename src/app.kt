@@ -7,6 +7,11 @@ class Dog(id : Int, name : String, home : Address, val breed: String) : Animal(i
     }
 }
 
+fun Dog.extensionMethod() : Unit
+{
+    println("running extensionMethod")
+}
+
 fun main(args: Array<String>)
 {
     val roversHome = Address("Apartment 21", "Somewhere road", "The burbs", "Metropolis")
@@ -29,4 +34,6 @@ fun main(args: Array<String>)
 
     println(rover)
     println("Name: " + rover.name)
+
+    rover.extensionMethod()
 }
